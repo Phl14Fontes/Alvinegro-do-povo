@@ -1,3 +1,3 @@
 # Alvinegro-do-povo
-Projeto individual - BandTec
+BandTec - Projeto individual
 Pedro Fontes - 01212088
