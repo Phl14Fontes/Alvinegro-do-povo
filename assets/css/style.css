@@ -1,0 +1,24 @@
+:root{
+
+}
+.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.header{
+width: 100%;
+height: 15vh;
+display: flex;
+}
+.navbar{
+width: 90%;
+display: flex;
+margin-left: 5%;
+margin-right: 5%;
+justify-content: space-between;
+}
+.header .navbar ul{
+text-decoration: none;
+/*ver qual é*/
+list-style: none;
+}
