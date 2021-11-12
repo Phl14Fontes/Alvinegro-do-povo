@@ -56,11 +56,16 @@ body{
 }
 
 .header .navbar li:hover{
-    /*transition: .5s;*/
+    transition: .5s;
     box-shadow: 0px 3px 3px #939;
     /*horizontal vertical, esfumaçado, cor*/
+}
+.header .navbar a:hover{
+    transition: .5s;
+    color: #ffd700;
 }
 
 .divisor{
     font-weight: 800;
+    color: #ffd700;
 }
