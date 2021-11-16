@@ -37,7 +37,7 @@ body{
     color: #fff;
     list-style: none;
     display: flex;
-    margin-left: 60%;
+    margin-left: 47%;
     align-items: center; 
 }
 .header .navbar li{
@@ -52,7 +52,7 @@ body{
 }
 
 .active{
-    font-weight: 800;
+    font-weight: 700;
     border-bottom: 2px solid #939;
 }
 
