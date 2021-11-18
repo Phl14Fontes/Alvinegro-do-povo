@@ -16,7 +16,7 @@
      <div class="navbar">
          <ul>
              <li>
-                 <a class="active" href="index.html">Portal</a>
+                 <a href="index.html">Portal</a>
              </li>
              <li>
                  <a href="sobre.html">Sobre</a>
@@ -26,7 +26,7 @@
              </li>
              <li class="divisor"> | </li>
              <li>
-                 <a href="cadastro.html">cadastro</a>
+                 <a class="active" href="cadastro.html">cadastro</a>
              </li>
              <li>
                  <a href="login.html">Entrar</a>
@@ -36,7 +36,51 @@
     </div>
     <!--fim do header-->
 
-    TELA DE CADASTRO EM DESENVOLVIMENTO    
+    <div class="banner">
+        <div class="container-banner">
+            <p class="title-cadastro">
+                Faça parte do Bando de Loucos!
+            </p>
+
+            <div class="infos-cadastro">
+                <span class="fundo-texto-cadastro">Insira seu nome:                    
+                </span> 
+                <br> 
+                <input id="nome_cadastro">
+                <br>
+
+                <span
+                 class="fundo-texto-cadastro">Digite seu email:
+                </span> 
+                <br> 
+                <input id="email_cadastro">
+                <br>
+
+                <span
+                class="fundo-texto-cadastro" >Digite uma senha:
+                </span> 
+                <br> 
+                <input 
+                type="password" 
+                id="senha_usuario">
+                <br>
+
+                <span
+                class="fundo-texto-cadastro">Confirme sua senha:
+                </span>
+                <br> 
+                <input 
+                type="password"
+                id="senha_usuario">
+                <br>
+
+                <button class="btn-cadastrar" onclick="cadastrar()">Enviar Dados</button>
+
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
 

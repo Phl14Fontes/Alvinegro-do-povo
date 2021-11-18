@@ -23,8 +23,6 @@
     margin-bottom: 12.5vh;
     margin-left: 12.5%;
     margin-right: 12.5%;
-    /*Opacity 0-1 -> 0 some e 1 deixa total visivel */
-    /*opacity: 0.5;*/
 }
 .container-inicio .title-intro{
     font-weight: 800;
@@ -54,7 +52,6 @@
     flex-direction: column;
     color: #f8f8ff;
     border-radius: 15px;
-   /* margin-top: 10vh; */
     text-align: justify;
     background-color: #3f0569;
     border: solid #ffd700 1px;
@@ -63,7 +60,6 @@
     width: 75%;
     height: 30vh;
     align-self: center;
-    /*Definir backgorund color da imagem de acordo com a foto do fundo*/
     background-color: #808080;
     border-radius: 20px;
 }
