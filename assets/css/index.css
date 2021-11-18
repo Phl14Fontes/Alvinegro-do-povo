@@ -1,11 +1,13 @@
 /* Guia de Cores:
     -color-gold: #ffd700;
     -color-red: #ed1c2e;
-    -color-bg-header-footer: rgb(36, 31, 31)
-    -color-purple: #939
-    -color-darkpurple: #4b0082
-    -color-+darkpurple: #3f0569
-    -color-ghostwhite: #f8f8ff
+    -color-bg-header-footer: rgb(36, 31, 31);
+    -color-purple: #939;
+    -color-darkpurple: #4b0082;
+    -color-+darkpurple: #3f0569;
+    -color-ghostwhite: #f8f8ff;
+    -color-fonteLink: #808080;
+    -color-text-manchete: #111;
 */
 .inicio{
     width: 100%;
@@ -55,13 +57,14 @@
    /* margin-top: 10vh; */
     text-align: justify;
     background-color: #3f0569;
+    border: solid #ffd700 1px;
 }
 #icon-feed{
     width: 75%;
     height: 30vh;
     align-self: center;
     /*Definir backgorund color da imagem de acordo com a foto do fundo*/
-    background-color: rgb(36, 31, 31);
+    background-color: #808080;
     border-radius: 20px;
 }
 
@@ -81,6 +84,47 @@
     border: #fff 1px solid;
     margin-bottom: 5vh;
 }
+
+/* Imagens Notícias Capa */
+.cover-news{
+    width: 230px;
+    height: 160px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.container-manchete{
+    display: flex;
+    flex-direction: column;
+}
+.title-manchete{
+    margin-left: 5%;
+    margin-right: 18%;
+    margin-top: 5px;
+    color: #4b0082;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.content-manchete{
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 0;
+}
+.footer-manchete{
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #808080;
+}
+.footer-manchete a{
+    color: #808080;
+}
+
 
 .jogos{
     margin-top: 5vh;
@@ -110,12 +154,14 @@
     border-bottom: #3f0569 solid 1px;
     width: 100%;
     height: 27.6vh;
+    display: flex;
 }
 
 .jogos .container-jogos{
     border-bottom: solid 1px #3f0569;
     width: 100%;
     height: 30vh;
+    border: solid #3f0569 0.5px;
 }
 
 .title-jogo{
