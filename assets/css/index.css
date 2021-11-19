@@ -9,6 +9,11 @@
     -color-fonteLink: #808080;
     -color-text-manchete: #111;
 */
+
+html{
+    scroll-behavior:smooth;
+}
+
 .inicio{
     width: 100%;
     height: 85vh;
@@ -56,14 +61,21 @@
     background-color: #3f0569;
     border: solid #ffd700 1px;
 }
+.box-section a{
+        margin: 0;
+        padding: 0;
+        align-self: center;
+        height: 25vh;
+        /* margin-top: 3vh; */
+    }
 #icon-feed{
-    width: 75%;
-    height: 30vh;
+    width: 100%;
+    margin-top: 6vh;
+    height: 25vh;
     align-self: center;
     background-color: #808080;
     border-radius: 20px;
 }
-
 .banner{
     background-color: #3f0569;
     width: 100%;

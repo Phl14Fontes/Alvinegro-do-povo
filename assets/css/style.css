@@ -73,9 +73,37 @@ body{
     color: #ffd700;
 }
 
+/* FOOTER */
 footer{
-    background-color: rgb(36, 31, 31);
+    background: rgb(36, 31, 31);
+    background: linear-gradient(0deg ,
+    rgba(36,31,31,1) 1%,
+    rgba(226,219,231,1) 39%,
+    rgba(248,248,248,1)49%,
+    rgba(200,185,211,1)78%,
+    rgba(104,59,137,1)98%,
+    rgba(63,5,105,1)100%);
+}
+
+.footer{
     width: 100%;
-    height: 10vh;
-    color: #f8f8ff;
+    height: 20vh;
+
+}
+.container-footer{
+    background-color: #241f1f; 
+    width: 98.95%;
+    margin-top: -0.4vh;
+    height: 5vh;
+    color: #f8f8f8;
+    padding: 7px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#simbolos-footer{
+    height: 20vh;
+    width: 100%;
 }
