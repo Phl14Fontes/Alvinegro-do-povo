@@ -16,7 +16,7 @@
      <div class="navbar">
          <ul>
              <li>
-                 <a class="active" href="index.html">Portal</a>
+                 <a href="index.html">Portal</a>
              </li>
              <li>
                  <a href="sobre.html">Sobre</a>
@@ -29,14 +29,55 @@
                  <a href="cadastro.html">cadastro</a>
              </li>
              <li>
-                 <a href="login.html">Entrar</a>
+                 <a class="active" href="login.html">Entrar</a>
              </li>
          </ul>
      </div>
     </div>
     <!--fim do header-->
-    
-    TELA DE LOGIN EM DESENVOLVIMENTO
+
+        <div class="banner">
+
+            <div class="title-entrar">
+               <span class="fundo-title-login">
+                Já sou um Louco do Bando!
+                </span> 
+            </div>
+
+            <div class="infos-entrar">
+                <span class="fundo-texto-login">
+                Digite seu nome
+                </span>
+                <br>
+                <input id="input_nome" placeholder="ex: Pedro">
+                <br>
+
+                <span class="fundo-texto-login">
+                Digite sua senha
+                </span>
+                <br>
+                <input type="password" id="input_senha" placeholder="**********">
+                <br>
+
+                <button class="btn-entrar" onclick="logar()">Entrar</button>
+
+            </div>
+            
+            <div class="retorno-entrar">
+                Ainda não faz parte da maior torcida do Brasil? <a id="ir_cadastrar" href="cadastro.html">Cadastre-se</a> <br><br> <a id="esqueci_senha" href="">Esqueci a senha</a>
+            </div>
+
+        </div>
+
+    <footer>
+        <div class="footer">
+            <img id="simbolos-footer" src="/assets/img/icons-footer-removebg-preview.png" alt="">
+
+            <div class="container-footer">
+            Loucos por ti Corinthians! &copy;
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 

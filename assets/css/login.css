@@ -1,0 +1,102 @@
+/* Guia de Cores:
+    -color-gold: #ffd700;
+    -color-red: #ed1c2e;
+    -color-bg-header-footer: rgb(36, 31, 31);
+    -color-purple: #939;
+    -color-darkpurple: #4b0082;
+    -color-+darkpurple: #3f0569;
+    -color-ghostwhite: #f8f8ff;
+    -color-fonteLink: #808080;
+    -color-text-manchete: #111;
+    -color-bg-vinho: #5e2129;
+*/
+body{
+    background-image: url(/assets/img/background-sinalizadores.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    background-attachment: fixed;
+}
+
+.banner{
+    margin-top: 10vh;
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 25vh;
+}
+.title-entrar{
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    color: #f8f8f8;
+    background-color: #5e2129;
+    border-radius: 50px;
+    padding: 7px;
+    width: 100%;
+}
+
+.infos-entrar{
+    font-size: 20px;
+    color: #f8f8f8;
+    width: 60%;
+}
+.infos-entrar input{
+    margin-top: 2vh;
+    padding: 10px;
+    width: 90%;
+    border-radius: 50px;
+    margin-bottom: 8vh;
+}
+.infos-entrar input:focus{
+    border: 2px solid red;
+    outline: none;
+}
+.btn-entrar{
+    padding: 10px;
+    width: 95%;
+    margin-top: 5vh;
+    height: 7vh;
+    border-radius: 50px;
+    font-weight: 850;
+    font-size: 20px;
+    color: #f8f8f8;
+    background-color: #5e2129;
+}
+.btn-entrar:hover{
+    color: red;
+    box-shadow: 2px 2px 3px red;
+    cursor: pointer;
+}
+
+.fundo-texto-login{
+    background-color: #5e2129;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.retorno-entrar{
+    background-color: #5e2129;
+    color: #f8f8f8;
+    margin-top: 10vh;
+    padding: 10px;
+    border-radius: 25px;
+
+}
+#esqueci_senha{
+    color: #FFF;
+}
+#ir_cadastrar{
+    color: #fff;
+}
