@@ -11,7 +11,7 @@
 */
 
 .banner{
-    background-image: url(/assets/img/background-aerea.jpg);
+    background-image: url(../img/background-aerea.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

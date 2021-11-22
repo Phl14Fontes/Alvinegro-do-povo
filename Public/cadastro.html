@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alvinegro do Povo | Cadastrar</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
 </head>
 <body>
     <div class="header">
         <div class="container-header">
-        <a href="index.html"><img class="img-sccp-logo" src="assets/img/logo-site.jpg" alt="Simbolo Corinthians"></a>
+        <a href="index.html"><img class="img-sccp-logo" src="../assets/img/logo-site.jpg" alt="Simbolo Corinthians"></a>
         </div> 
      <div class="navbar">
          <ul>
@@ -46,14 +46,14 @@
                 <span class="fundo-texto-cadastro">Insira seu nome:                    
                 </span> 
                 <br> 
-                <input id="nome_cadastro">
+                <input id="nome_input" placeholder="ex: Ronaldo">
                 <br>
 
                 <span
                  class="fundo-texto-cadastro">Digite seu email:
                 </span> 
                 <br> 
-                <input id="email_cadastro">
+                <input id="email_input" placeholder="ex: ronaldo@coringao.com.br">
                 <br>
 
                 <span
@@ -62,7 +62,7 @@
                 <br> 
                 <input 
                 type="password" 
-                id="senha_usuario">
+                id="senha_input" placeholder="**********">
                 <br>
 
                 <span
@@ -71,10 +71,10 @@
                 <br> 
                 <input 
                 type="password"
-                id="senha_usuario">
+                id="confirmacao_senha_input" placeholder="**********">
                 <br>
 
-                <button class="btn-cadastrar" onclick="cadastrar()">Enviar Dados</button>
+                <button class="btn-cadastrar" onclick="cadastrar()">Cadastrar</button>
 
             </div>
             
@@ -83,14 +83,14 @@
 
     <footer>
         <div class="footer">
-            <img id="simbolos-footer" src="/assets/img/icons-footer-removebg-preview.png" alt="">
+            <img id="simbolos-footer" src="../assets/img/icons-footer-removebg-preview.png" alt="Todos símbolos da história do clube, na horizontal">
 
             <div class="container-footer">
-            Loucos por ti Corinthians! &copy;
+            Loucos por ti Corinthians! &copy; 2021
             </div>
         </div>
     </footer>
 </body>
 </html>
 
-<script src="/assets/js/cadastro.js"></script>
+<script src="../assets/js/cadastro.js"></script>
