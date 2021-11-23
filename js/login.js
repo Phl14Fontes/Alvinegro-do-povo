@@ -1,5 +1,4 @@
 function entrar() {
-    aguardar();
 
     var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
 
@@ -58,15 +57,12 @@ function validarSessao() {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         h1Titulo.innerHTML = `${login}`;
 
-        finalizarAguardar();
     } else {
         window.location = "login.html";
     }
 }
 
 function sair() {
-    aguardar();
     sessionStorage.clear();
-    finalizarAguardar();
     window.location = "login.html";
 }

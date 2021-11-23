@@ -1,20 +1,27 @@
-function limparFormulario() {
-    document.getElementById("form_login").reset();
-}
-
+// function limparFormulario() {
+//    document.getElementById("form_login").reset();
+// }
+lista_caracteres_especiais = ["@","%","$","#","&","/","?","!",".","*","=","+",",",":",";","(",")","[","]","|","-","_"];
 function entrar() {
 
-    var emailVar = nome_input.value;
-    var senhaVar = senha_input.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_senha.value;
  
+    //VALIDAÇÕES:
     if (emailVar == "" || senhaVar == "") {
         window.alert("Preencha todos os campos para prosseguir!");
         return false;
     }
-
     if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.startsWith("@")
         || emailVar.endsWith("@") || emailVar.length < 8) {
         window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+        document.getElementById("input_email").focus();
+        return false;
+    }
+    if(senhaVar.length <= 5){
+        window.alert("Ops, senha muito curta! Tente novamente.");
+        document.getElementById("input_senha").focus();
+        return false;
     }
 
     fetch("/usuarios/autenticar", {
@@ -41,7 +48,7 @@ function entrar() {
                 sessionStorage.ID_USUARIO = json.id;
 
                 setTimeout(function () {
-                    window.location = "../Public/comunidade.html";
+                    window.location = "comunidade.html";
                 }, 1000); // apenas para exibir o loading
 
             });

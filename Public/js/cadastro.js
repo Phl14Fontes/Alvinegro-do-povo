@@ -1,8 +1,37 @@
 function cadastrar() {
 
-    var nomeVar = nome_input.value.toLowerCase();
+    var nomeVar = nome_input.value.trim().toUpperCase();
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+    //VALIDAÇÕES
+    if(nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == ""){
+        window.alert("Preencha todos os campos para prosseguir!");
+        document.getElementById("nome_input").focus();
+        return false;
+    }
+    if(nomeVar.length <=2){
+        window.alert("Nome muito curto!");
+        document.getElementById("nome_input").focus();
+        return false
+    }
+    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.startsWith("@")
+        || emailVar.endsWith("@") || emailVar.length < 8) {
+        window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+        document.getElementById("email_input").focus();
+        return false;
+    }
+    if(senhaVar.length <= 5){
+        window.alert("Ops, senha muito curta! Tente novamente.");
+        document.getElementById("senha_input").focus();
+        return false;
+    }
+    if(confirmacaoSenhaVar != senhaVar){
+        window.alert("A confirmação, está diferente da senha inserida!");
+        document.getElementById("confirmacao_senha_input").focus();
+        return false;
+    }
 
     fetch("/usuarios/cadastrar", {
         method: "POST",
