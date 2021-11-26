@@ -36,7 +36,55 @@
     </div>
     <!--fim do header-->
 
-    TELA DE COMUNIDADE EM DESENVOLVIMENTO
+    <!-- Acesso a lib através do cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <div class="graficos-estaticos">
+
+      <div class="graph-left">
+        <canvas id="myChartLeft" style="width: 100%; height: 100%"></canvas>
+
+      </div>
+
+      <div class="graph-right">
+        <canvas id="myChartRight" style="width: 100%; height: 100%"></canvas>
+      </div>
+
+    </div>
+    <!--Fim Gráficos chart.js-->
+    <div class="ranking">
+
+      <div class="card-ranking">
+        <article class="card-jogador">
+          <img class="foto-jogador" src="" alt=" Foto, Card de jogador (nome jogador)">
+          <p class="desc-jogador">
+            <b>Nome:</b> <br>
+            <b>Idade:</b> <br>
+            <b>Altura:</b> <br>
+            <b>Posição:</b> <br>
+            <b>Data de Nascimento:</b> <br>
+          </p>
+
+        </article>
+
+      </div>
+
+      <div class="ranking-positions">
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer>
         <div class="footer">
@@ -51,3 +99,4 @@
 </html>
 
 <script src="./js/comunidade.js"></script>
+<script src="./js/chartComunidade.js"></script>

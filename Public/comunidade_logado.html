@@ -42,6 +42,73 @@
 
 
 
+      <!-- Da acesso a lib através do cdn -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>         
+      <div class="graficos">
+        <div class="graph">
+          <div class="box red">
+            <h1>00°</h1>
+            <h3>STATUS</h3>
+            <p>Descrição do status</p>
+          </div>
+          <div class="box yellow">
+            <h1>00°</h1>
+            <h3>STATUS</h3>
+            <p>Descrição do status</p>
+          </div>
+          <div class="box green">
+            <h1>00°</h1>
+            <h3>STATUS</h3>
+            <p>Descrição do status</p>
+          </div>
+        </div>
+        <!-- Gráficos -->
+        <div class="graph">
+          <canvas id="myChart" style="width: 100%; height: 100%"></canvas>
+        </div>
+  
+        <div class="graph">
+          
+        </div>
+  
+        <div class="graph">
+  
+        </div>
+      </div>
+  
+  <script>
+    // Inicia uma variável do tipo constante (não pode ser reatribuida)
+    const config = { 
+      type: "line", // tipo do gráfico
+      data: { // objeto que vai conter os dados do gráfico
+        labels: ["07:00", "10:00", "13:00"], // labels (rótulos) que serão identificados os nossos dados 
+        datasets: [ // datasets (conjunto de dados)
+          {
+            label: "Temperatura diária", // irá conter o rótulo principal do nosso gráfico
+            data: [15, 17, 32], // os dados referentes aqueles rótulos
+            backgroundColor: "#2196F3", // cor das "bolinhas" do gráfico
+            borderColor: "#3F51B5" // cor da "linha" do gráfico
+          }
+        ]
+      },
+      options: {
+        maintainAspectRatio: false 
+        /* maintainAspectRatio (manter relação de aspecto) 
+          caso true: ele "obdece" a altura e largura que colocamos
+          caso false: ele não "obdece" a altura e largura que colocamos e se ajusta ao componente pai
+        */
+      }
+    }
+  
+    var myChartLine = new Chart(document.getElementById("myChart"), config); 
+    /* aqui obrigatoriamente tem que colocar new Chart() para criar um novo chart 
+    e passar dentro dos (parênteses) o elemento canvas que você quer mandar e 
+    separado pela virgula o que você quer mandar, no nosso caso a config que fizemos 
+    */
+  </script>
+
+
+
 
 
 
