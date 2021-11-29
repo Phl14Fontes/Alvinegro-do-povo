@@ -1,7 +1,3 @@
-// function limparFormulario() {
-//    document.getElementById("form_login").reset();
-// }
-lista_caracteres_especiais = ["@","%","$","#","&","/","?","!",".","*","=","+",",",":",";","(",")","[","]","|","-","_"];
 function entrar() {
 
     var emailVar = input_email.value;
@@ -48,7 +44,7 @@ function entrar() {
                 sessionStorage.ID_USUARIO = json.id;
 
                 setTimeout(function () {
-                    window.location = "comunidade.html";
+                    window.location = "comunidade_logado.html";
                 }, 1000); // apenas para exibir o loading
 
             });

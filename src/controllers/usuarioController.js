@@ -1,3 +1,4 @@
+const { response } = require("express");
 var usuarioModel = require("../models/usuarioModel");
 
 var sessoes = [];
@@ -13,7 +14,7 @@ function listar(req, res) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
             } else {
-                res.status(204).send("Nenhum resultado encontrado!")
+                res.status(404).send("Nenhum resultado encontrado!")
             }
         }).catch(
             function (erro) {
@@ -63,29 +64,46 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
+    //var resposta = usuarioModel.listar(email)
 
     if (nome == undefined) {
-        res.status(400).send("Seu nome está undefined!");
+        res.status(400).send("Seu nome está em branco!");
     } else if (email == undefined) {
-        res.status(400).send("Seu email está undefined!");
+        res.status(400).send("Seu email está em branco!");
     } else if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!");
+        res.status(400).send("Sua senha está em branco!");
     } else {
-        usuarioModel.cadastrar(nome, email, senha)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
+        //select para checar se o email já existe no BD;
+        usuarioModel.listar(email).then((resposta)=>{
+            if(resposta.length > 0){
+                res.json(resposta);
+                alert('Email ja cadastrado')
+                console.log("Email já cadastrado!");
+            }else
+            //se não existir faz o insert;
+                usuarioModel.cadastrar(nome, email, senha)
+                .then(
+                    function (resultado) {
+                        res.json(resultado);
+                        if (resultado.length == 1) {
+                          console.log(resultado);
+                        res.json(resultado[0]);
+                        } else if (resultado.length == 0) {
+                        res.status(403).send("Email e/ou senha inválido(s)");
+                        } else {
+                        res.status(403).send("Mais de um usuário com o mesmo login!");
+                        }
                 }
             ).catch(
                 function (erro) {
                     console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
+                    console.log("\nHouve um erro ao realizar o cadastro! Erro: ", erro.sqlMessage);
                     res.status(500).json(erro.sqlMessage);
                 }
             );
+        }).catch((erro)=>{   
+            res.status(500).json(erro.sqlMessage);
+        }) 
     }
 } 
 
