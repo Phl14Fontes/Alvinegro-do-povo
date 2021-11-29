@@ -36,67 +36,128 @@
     </div>
     <!--fim do header-->
 
-    <!-- Acesso a lib através do cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
-    <div class="graficos-estaticos">
-
-      <div class="graph-left">
-        <canvas id="myChartLeft" style="width: 100%; height: 100%"></canvas>
-
-      </div>
-
-      <div class="graph-right">
-        <canvas id="myChartRight" style="width: 100%; height: 100%"></canvas>
-      </div>
-
-    </div>
-    <!--Fim Gráficos chart.js-->
-    <div class="ranking">
-
-      <div class="card-ranking">
-        <article class="card-jogador">
-          <img class="foto-jogador" src="" alt=" Foto, Card de jogador (nome jogador)">
-          <p class="desc-jogador">
-            <b>Nome:</b> <br>
-            <b>Idade:</b> <br>
-            <b>Altura:</b> <br>
-            <b>Posição:</b> <br>
-            <b>Data de Nascimento:</b> <br>
+    <div class="banner">
+      
+      <div class="graficos-estaticos">
+        <div class="graph-left">
+          <p class="title-graphs">
+            DÉCIMO SEGUNDO JOGADOR:
           </p>
+          <canvas id="myChartLeft" style="width: 100%; height: 100%"></canvas>
+        </div>
+        
+        <div class="graph-right">
+          <p class="title-graphs">
+            A MAIOR TORCIDA DO ESTADO!
+          </p>
+          <canvas id="myChartRight" style="width: 100%; height: 100%"></canvas>
+        </div>
+        
+      </div>
+      <!--Fim Gráficos chart.js-->
+      
+      <div class="ranking">
+        
+        <div class="title-card">
+        <p>
+          PRINCIPAIS JOGADORES:
+        </p>
+      </div>
+      
+      <div class="card-ranking">
 
+        <!-- LINHA 1: -->
+        
+        <article class="card-jogador" id="card_cassio">
+          <img class="foto-jogador" src="img/foto-card-cassio.png" alt="Foto do card do jogador Cassio">
+          <p class="desc-jogador">
+            <b>Nome:</b> Cássio Ramos <br>
+            <b>Idade:</b> 34 anos<br>
+            <b>Altura:</b> 1,96m<br>
+            <b>Posição:</b> Goleiro<br>
+            <b>Data de nascimento:</b> 06/06/87<br>
+          </p>
         </article>
 
+        <article class="card-jogador">
+          <img class="foto-jogador" src="img/foto-card-gil.png" alt="Foto do card do jogador Gil">
+          <p class="desc-jogador">
+            <b>Nome:</b> Carlos Gilberto <br>
+            <b>Idade:</b> 34 anos<br>
+            <b>Altura:</b> 1,92m<br>
+            <b>Posição:</b> Zagueiro<br>
+            <b>Data de nascimento:</b> 12/06/87<br>
+          </p>
+        </article>
+        
+        <article class="card-jogador">
+          <img class="foto-jogador" src="img/foto-card-joão-victor.png" alt="Foto do card do jogador João Victor">
+          <p class="desc-jogador">
+            <b>Nome:</b> João Victor <br>
+            <b>Idade:</b> 23 anos<br>
+            <b>Altura:</b> 1,87m<br>
+            <b>Posição:</b> Zagueiro<br>
+            <b>Data de Nascimento:</b> 17/07/98<br>
+          </p>
+        </article>
+        
+        <article class="card-jogador">
+          <img class="foto-jogador" src="img/foto-card-fagner.png" alt="Foto do card do jogador Fagner">
+          <p class="desc-jogador">
+            <b>Nome:</b> Fagner Lemos <br>
+            <b>Idade:</b> 32 anos<br>
+            <b>Altura:</b> 1,68m<br>
+            <b>Posição:</b> Lateral<br>
+            <b>Data de Nascimento:</b> 11/06/89<br>
+          </p>
+        </article>
+        
+        <article class="card-jogador">
+          <img class="foto-jogador" src="img/foto-card-fabio-santos.png" alt="Foto do card do jogador Fábio Santos">
+          <p class="desc-jogador">
+            <b>Nome:</b> Fábio Santos <br>
+            <b>Idade:</b> 36 anos<br>
+            <b>Altura:</b> 1,79m<br>
+            <b>Posição:</b> Lateral<br>
+            <b>Data de Nascimento:</b> 15/09/85<br>
+          </p>
+        </article>
+        
+        <!-- LINHA 2: -->
+
+        <article class="card-jogador">
+          <img class="foto-jogador" src="https://static.corinthians.com.br/uploads/1632236418834b4c833234fc9baa268479506b2ab9.png" alt=" Foto, Card de jogador (nome jogador)">
+          <p class="desc-jogador">
+            <b>Nome:</b> Fábio Santos <br>
+            <b>Idade:</b> 36 anos<br>
+            <b>Altura:</b> 1,79m<br>
+            <b>Posição:</b> Lateral<br>
+            <b>Data de Nascimento:</b> 15/09/85<br>
+          </p>
+        </article>
+        
       </div>
-
+      
       <div class="ranking-positions">
-
+        
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer>
-        <div class="footer">
-            <img id="simbolos-footer" src="./img/icons-footer.png" alt="Todos símbolos da história do clube, alinhados na horizontal">
-
-            <div class="container-footer">
-            Loucos por ti Corinthians! &copy; 2021
-            </div>
-        </div>
-    </footer>
+    
+  </div>
+  
+  <footer>
+    <div class="footer">
+      <img id="simbolos-footer" src="./img/icons-footer.png" alt="Todos símbolos da história do clube, alinhados na horizontal">
+      
+      <div class="container-footer">
+        Loucos por ti Corinthians! &copy; 2021
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
 
+<!-- Acesso a lib através do cdn -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./js/comunidade.js"></script>
-<script src="./js/chartComunidade.js"></script>
