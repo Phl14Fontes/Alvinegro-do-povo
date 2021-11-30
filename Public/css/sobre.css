@@ -1,0 +1,55 @@
+/* Guia de Cores:
+    -color-gold: #ffd700;
+    -color-red: #ed1c2e;
+    -color-bg-header-footer: rgb(36, 31, 31);
+    -color-purple: #939;
+    -color-+darkpurple: #3f0569;
+    -color-ghostwhite: #f8f8ff;
+    -color-fonteLink: #808080;
+    -color-text-manchete: #111;
+*/
+p{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    background-color: #f8f8f8;
+    height: 400vh;
+    width: 100%;
+}
+/* PARTE ROXA */
+.banner .escolha_tema {
+    width: 70%;
+    margin-right: 30%;
+    height: 70vh;
+    margin-top: 5vh;
+    background-color: #3f0569ef;
+    /* border-right: 1px solid #ffd700; */
+    /* border-bottom: 1px solid #ffd700; */
+    box-shadow: 5px 5px 2px #000;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+}
+.escolha_tema .box-image{
+    width: 25%;
+    margin-left: 5%;
+    display: flex;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 90%;
+}
+.escolha_tema .box-resp{
+    color: #f8f8f8;
+    font-size: 18px;
+    width: 75%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* PARTE PRETA */
