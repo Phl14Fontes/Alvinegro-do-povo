@@ -12,13 +12,25 @@ CREATE TABLE usuario (
 );
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE alvinegroDoPovo;
+use alvinegrodoPovo;
 
-USE alvinegroDoPovo;
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+create table usuario (
+	idUsuario int primary key auto_increment,
+    nome varchar(10),
+    email varchar(45),
+    constraint check_email check (email like '%@%' and email like '%@%.com%'),
+    senha varchar(45)	
+);
+create table enquete (
+	idEnquete int primary key auto_increment,
+    descricao varchar(45)
+);
+create table voto (
+	fkEnquete int,
+    fkUsuario int,
+    primary key (fkEnquete, fkUsuario),
+    foreign key (fkEnquete) references enquete (idEnquete),
+    foreign key (fkUsuario) references usuario (idUsuario),
+    opcao int,
+    constraint check_opcao check (opcao = 1 or opcao = 2)
 );

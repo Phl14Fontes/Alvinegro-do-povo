@@ -15,7 +15,6 @@ function validarSessao() {
         window.location = "login.html";
 }
 
-
 //CHART.JS:
 const config = {
     type: 'bar',
@@ -80,4 +79,8 @@ const config = {
     }
   };
 
-  var myChartLine2 = new Chart(document.getElementById("myChartRight"), config2)
+  var myChartLine2 = new Chart(document.getElementById("myChartRight"), config2);
+
+function voto(){
+  
+}

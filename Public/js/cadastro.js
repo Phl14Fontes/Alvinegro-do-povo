@@ -1,6 +1,5 @@
 function cadastrar() {
-    var lista_numero = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
+    
     var nomeVar = nome_input.value.trim().toUpperCase();
     var emailVar = email_input.value.trim();
     var senhaVar = senha_input.value;
