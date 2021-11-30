@@ -65,3 +65,7 @@ function entrar() {
 
     return false;
 }
+
+function ir_cadastro(){
+    window.location ="cadastro.html";
+}

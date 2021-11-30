@@ -71,6 +71,9 @@ body{
     border-radius: 50px;
     font-weight: 850;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #f8f8f8;
     background-color: #5e2129;
 }
@@ -78,6 +81,7 @@ body{
     color: red;
     box-shadow: 2px 2px 3px red;
     cursor: pointer;
+    font-size: 22px;
 }
 
 .fundo-texto-login{
@@ -91,12 +95,55 @@ body{
     color: #f8f8f8;
     margin-top: 10vh;
     padding: 10px;
+    width: 55%;
+    margin-left: 20%;
+    margin-right: 22.5%;
     border-radius: 25px;
 
 }
-#esqueci_senha{
-    color: #FFF;
+
+.btns-tratamento{
+    display: flex;
+    width: 55%;
+    margin-top: 10vh;
+    margin-left: 20%;
+    margin-right: 22.5%;
 }
-#ir_cadastrar{
+
+.btn-cadastro{
+    width: 55%;
+    height: 7vh;
+    display: flex;
+    padding: 10px;
+    align-items: center;
     color: #fff;
+    margin-right: 5%;
+    font-weight: 800;
+    justify-content: center;
+    background-color: #5e2129;
+    border-radius: 50px;
+    font-size: 16px;
+}
+.btn-esqueci-senha{
+    width: 55%;
+    height: 7vh;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: #5e2129;
+    border-radius: 50px;
+}
+.btn-cadastro:hover{
+    color: red;
+    box-shadow: 2px 2px 3px red;
+    cursor: pointer;
+}
+.btn-esqueci-senha:hover{
+    color: red;
+    box-shadow: 2px 2px 3px red;
+    cursor: pointer;
 }
