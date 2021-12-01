@@ -127,5 +127,5 @@ const config = {
   var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3);  
 
 function voto(){
-  
+    
 }

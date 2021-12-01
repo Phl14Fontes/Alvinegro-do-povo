@@ -18,11 +18,10 @@ create table usuario (
 	idUsuario int primary key auto_increment,
     nome varchar(10),
     email varchar(45),
-    constraint check_email check (email like '%@%' and email like '%@%.com%'),
     senha varchar(45)	
 );
 create table enquete (
-	idEnquete int primary key auto_increment,
+	idEnquete int primary key,
     descricao varchar(45)
 );
 create table voto (
@@ -31,6 +30,8 @@ create table voto (
     primary key (fkEnquete, fkUsuario),
     foreign key (fkEnquete) references enquete (idEnquete),
     foreign key (fkUsuario) references usuario (idUsuario),
-    opcao int,
-    constraint check_opcao check (opcao = 1 or opcao = 2)
+    opcao1 int,
+    opcao2 int,
+    constraint check_opcao1 check (opcao1 = 1),
+    constraint check_opcao2 check (opcao2 = 1),
 );
