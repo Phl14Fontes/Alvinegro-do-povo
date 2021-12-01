@@ -44,7 +44,7 @@ function entrar() {
                 sessionStorage.ID_USUARIO = json.id;
 
                 setTimeout(function () {
-                    window.location = "comunidade_logado.html";
+                    window.location = "telas_logado/comunidade_logado.html";
                 }, 1000); // apenas para exibir o loading
 
             });

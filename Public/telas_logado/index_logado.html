@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvinegro do Povo | Portal</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body onload="validarSessao()">
+    <div class="header">
+        <div class="container-header">
+        <a href="index_logado.html"><img class="img-sccp-logo" src="../img/logo-site.jpg" alt="Simbolo do Corinthians, todo branco, logo do site"></a>
+        </div> 
+     <div class="navbar">
+         <ul>
+             <li>
+                 <a class="active" href="index_logado.html">Portal</a>
+             </li>
+             <li>
+                 <a href="sobre_logado.html">Sobre</a>
+             </li>
+             <li>
+                 <a href="comunidade_logado.html">Comunidade</a>
+             </li>
+             <li class="divisor"> | </li>
+             <li id="nome_li">
+                <span id="nome_usuario_header">Olá, </span>
+             </li>
+             <li>
+                 <a href="../index.html" onclick="sair()">Sair</a>
+             </li>
+         </ul>
+     </div>
+    </div>
+    <!--fim do header-->
+
+    <div class="inicio">
+        <div class="container-inicio">
+
+            <p class="title-intro">
+                Olá, você está no Alvinegro do povo,
+            </p>
+
+            <div class="boxes-section">
+
+                <p class="box-section">
+                    Em nosso Portal, você tem acesso a todas notícias e calendários de jogos. 
+
+                   <a href="#feed-noticias"><img id="icon_sao_jorge" src="../img/icon-sao-jorge.png" alt="Imagem de São Jorge"> </a>
+                </p>
+
+                <p class="box-section">
+                    Saiba mais sobre a história do clube e os valores do desenvolvedor do site.
+
+                    <a href="sobre_logado.html"><img id="icon_cadastro_comunidade" src="../img/icon-gaviao.png" alt="Imagem de Gavião, representando a maior torcida organizada do clube"> </a>
+                </p>
+
+                <p class="box-section" style="margin-right: 2.5%;">
+                    Você já é um mosqueteiro!
+
+                   <a href="comunidade_logado.html"> <img id="icon_mosqueteiro" src="../img/icon-mosqueteiro.png" alt="Imagem do Mosqueteiro, mascote do clube"> </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!--fim introdução-->
+
+    <div class="banner" id="feed-noticias">
+        <div class="noticias">
+            <p class="title-noticia">
+                Plantão alvinegro informa:
+            </p>
+
+            <div class="container-noticias">
+                <img class="cover-news" src="../img/capa-noticia-rg123.jpeg"
+                    alt="Imagem do Roger Guedes beijando a camisa do Corinthians, em um jogo">
+
+                <div class="container-manchete">
+
+                    <p class="title-manchete">
+                        Titular absoluto, Guedes faz valer em campo o esforço feito na contratação
+                    </p>
+
+                    <p class="content-manchete">
+                        Desde o surgimento das especulações de uma possível contratação, a Fiel Torcida movimentou a
+                        web. Roger Guedes já soma 6 gols em 14 partidas, além de 2 assistências, o atleta lidera o Timão
+                        em oito estatísticas ofensivas.
+                    </p>
+
+                    <p class="footer-manchete">
+                        15/11/2021 - 11:06 - Leia mais em: <a
+                            href="https://www.meutimao.com.br/noticias-do-corinthians/397365/roger-guedes-lidera-corinthians-em-oito-estatisticas-ofensivas-desde-sua-estreia"
+                            target="_blank">meutimao.com.br</a>
+                    </p>
+
+                </div>
+            </div>
+            <!--Noticia 1 Fim-->
+
+            <div class="container-noticias">
+                <img class="cover-news" src="../img/capa-noticia-fem-racismo.webp" alt="Atacante Adriana, comemora gol com o braço levantado, gesto de protesto contra o racismo">
+
+                <div class="container-manchete">
+
+                    <p class="title-manchete">
+                        Corinthians vai à final da Libertadores feminina e acusa rival de racismo
+                    </p>
+
+                    <p class="content-manchete">
+                        As meninas do Timão venceram por 8 a 0, e estão na final da Libertadores, o clube acusou uma
+                        jogadora adversária de chamar a atacante Adriana de "macaca", após a mesma fazer o 6º gol da
+                        partida. Mais tarde, após fechar o placar, Grazi comemorou com o punho erguido, símbolo de
+                        combate ao racismo.
+                    </p>
+
+                    <p class="footer-manchete" style="margin-top: 20px;">
+                        16/11/2021 - 20:15 - Leia mais em: <a
+                            href="https://www.uol.com.br/esporte/futebol/ultimas-noticias/2021/11/16/corinthians-vai-a-final-da-libertadores-feminina-e-acusa-rival-de-racismo.htm"
+                            target="_blank">uol.com.br</a>
+                    </p>
+
+                </div>
+            </div>
+            <!--noticia 2 Fim-->
+
+            <div style="border-bottom: 0;" class="container-noticias">
+
+                <img class="cover-news" style="border: solid 1px #000;" src="../img/capa-noticia-charles.jpg" alt="Foto de Charles do Bronx, segurando seu cinturão do UFC, e com a camisa do Corinthians">
+
+                <div class="container-manchete">
+
+                    <p class="title-manchete">
+                        Campeão do UFC, Charles do Bronx é novo embaixador do Corinthians
+                    </p>
+
+                    <p class="content-manchete">
+                        O lutador campeão peso leve e maior finalizador da história do UFC, irá divulgar os esportes de
+                        luta, participar de treinamentos, clínicas, orientações técnicas e ajudar na construção de
+                        oportunidades de negócios, para o clube paulista.
+                    </p>
+
+                    <p class="footer-manchete">
+                        15/11/2021 - 18:00 - Leia mais em: <a
+                            href="https://ge.globo.com/combate/noticia/campeao-do-ufc-charles-do-bronx-e-novo-embaixador-do-corinthians-e-desce-ate-de-tirolesa-na-arena.ghtml"
+                            target="_blank">ge.globo.com</a>
+                    </p>
+
+                </div>
+            </div>
+            <!--Noticia 3 Fim-->
+
+        </div>
+        <!--fim feed de noticiass-->
+
+        <div class="jogos">
+            <p class="title-jogo">Próximos Jogos:
+            <div class="container-jogos">
+                <p class="desc-jogo">
+                    <br>
+                    Camp. Brasileiro - 10ª Rodada<br>13/11 - 21:00
+                </p>
+                </p>
+
+                <p class="box-jogo">
+                    Cam <img src="../img/adversario-1.png" alt="Símbolo do Atletico Mineiro"> X <img src="../img/sccp-jogos.jpg" alt="Símbolo do Corinthians"> Cor
+                </p>
+
+                <p class="local-jogo">
+                    <br> Estádio do Mineirão
+                </p>
+            </div>
+
+            <div class="container-jogos">
+                <p class="desc-jogo"><br>
+                    Camp. Brasileiro - 11ª Rodada<br>19/11 - 16:00</p>
+                </p>
+
+                <p class="box-jogo">
+                    Cor <img src="../img/sccp-jogos.jpg" alt="Símbolo do Corinthians"> X <img src="../img/adversario-3.jpg" alt="Símbolo do Flamengo"> fla
+                </p>
+
+                <p class="local-jogo">
+                    <br> Neo Química Arena
+                </p>
+            </div>
+
+            <div class="container-jogos" style="border-bottom: 0px;">
+                <p class="desc-jogo"><br>
+                    Copa do Brasil - Oitavas de Final <br>25/11 -19:00
+                </p>
+
+                <p class="box-jogo">
+                    Cor <img src="../img/sccp-jogos.jpg" alt="Símbolo do Corinthians"> X <img src="../img/adversario-2.jpg" alt="Símbolo do Botafogo"> bot
+                </p>
+
+                <p class="local-jogo" style="padding-top: 5px;">
+                    <br> Neo Química Arena
+                </p>
+            </div>
+            <!--fim tabela de jogos-->
+
+        </div>
+
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <img id="simbolos-footer" src="../img/icons-footer.png" alt="Todos símbolos da história do clube, alinhados na horizontal">
+
+            <div class="container-footer">
+            Loucos por ti Corinthians! &copy; 2021
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script src="../js/index.js"></script>

@@ -9,34 +9,34 @@
     <link rel="stylesheet" href="./css/comunidade.css">
 </head>
 <body onload="validarSessao()">
-    <div class="header">
-        <div class="container-header">
-        <a href="index.html"><img class="img-sccp-logo" src="./img/logo-site.jpg" alt="Simbolo do Corinthians, todo branco, logo do site"></a>
-        </div> 
-     <div class="navbar">
-         <ul>
-             <li>
-                 <a href="index.html">Portal</a>
-             </li>
-             <li>
-                 <a href="sobre.html">Sobre</a>
-             </li>
-             <li>
-                 <a class="active" href="comunidade.html">Comunidade</a>
-             </li>
-             <li class="divisor"> | </li>
-             <li>
-                 <a href="cadastro.html">cadastro</a>
-             </li>
-             <li>
-                 <a href="login.html">Entrar</a>
-             </li>
-         </ul>
-     </div>
+  <div class="header">
+    <div class="container-header">
+        <a href="index.html"><img class="img-sccp-logo" src="./img/logo-site.jpg"
+                alt="Simbolo do Corinthians, todo branco, logo do site"></a>
     </div>
-    <!--fim do header-->
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">Portal</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre</a>
+            </li>
+            <li>
+                <a class="active" href="comunidade.html">Comunidade</a>
+            </li>
+            <li class="divisor"> | </li>
+            <li>
+                <a href="cadastro.html">cadastro</a>
+            </li>
+            <li>
+                <a href="login.html">Entrar</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--fim do header-->
 
-    
     <div class="banner">
       
       <div class="graficos-estaticos">
@@ -421,22 +421,49 @@
     </div>
 
     <div class="enquetes">
-
-      <!-- enquetes - analytics -->
-      
-    </div>
-    
-  </div>
-  
-  <footer>
-    <div class="footer">
-      <img id="simbolos-footer" src="./img/icons-footer.png" alt="Todos símbolos da história do clube, alinhados na horizontal">
-      
-      <div class="container-footer">
-        Loucos por ti Corinthians! &copy; 2021
+      <div class="title-enquete">
+        <p>
+          ENQUETES:
+        </p>
       </div>
+      <!-- enquetes - analytics -->
+      <div class="container-enquete">
+
+        <!-- Gol Neto youtube -->
+        <iframe class="box-video" src="https://www.youtube.com/embed/Y8jbWO-FFLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!-- Gol Marcelinho Carioca youtube -->
+        <iframe class="box-video2" src="https://www.youtube.com/embed/sHx_Mr5dUa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="desc-enquete">
+        <p>
+          Qual gol foi mais bonito?
+        </p>
+      </div>
+
+      <div class="barra-dinamica-enquete">
+        <div class="option-1" onclick="voto()">
+          NETO
+        </div>
+        <div class="option-2" onclick="voto()">
+          MARCELINHO
+        </div>
+      </div>
+
     </div>
-  </footer>
+
+  </div>
+
+    <footer>
+        <div class="footer">
+            <img id="simbolos-footer" src="./img/icons-footer.png" alt="Todos símbolos da história do clube, alinhados na horizontal">
+
+            <div class="container-footer">
+            Loucos por ti Corinthians! &copy; 2021
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 

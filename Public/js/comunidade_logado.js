@@ -6,13 +6,16 @@ function validarSessao() {
     var nome_span = document.getElementById("nome_usuario_header")
     if(email != null && nome != null){
         nome_span.innerHTML += `${nome}`;
-    }
+    } //else{
+    //   alert("Esta sessão expirou!");
+    //   sair();
+    // }
 }
 
 //se clicar em SAIR;
     function sair() {
         sessionStorage.clear();
-        window.location = "login.html";
+        window.location = "../login.html";
 }
 
 //CHART.JS:
@@ -21,7 +24,7 @@ const config = {
     data: {
       labels: ["Flamengo", "Corinthians", "São Paulo", "Palmeiras", "Vasco", "Cruzeiro", "Grêmio", "Inter", "Santos", "Atlético Mg"],
       datasets: [{
-          label: 'Maiores torcidas do Brasil ( em milhões)',
+          label: 'Maiores torcidas do Brasil (em milhões)',
           data: [43, 30, 17, 13, 8, 8, 8, 6, 6, 4],
           backgroundColor: [
             "#c22a1e",
