@@ -13,6 +13,7 @@ CREATE TABLE usuario (
 
 /* para workbench - local - desenvolvimento */
 use alvinegrodoPovo;
+drop database alvinegroDoPovo;
 
 create table usuario (
 	idUsuario int primary key auto_increment,
@@ -20,18 +21,9 @@ create table usuario (
     email varchar(45),
     senha varchar(45)	
 );
-create table enquete (
-	idEnquete int primary key,
-    descricao varchar(45)
-);
+
 create table voto (
-	fkEnquete int,
-    fkUsuario int,
-    primary key (fkEnquete, fkUsuario),
-    foreign key (fkEnquete) references enquete (idEnquete),
-    foreign key (fkUsuario) references usuario (idUsuario),
+    idVoto int primary key auto_increment,
     opcao1 int,
-    opcao2 int,
-    constraint check_opcao1 check (opcao1 = 1),
-    constraint check_opcao2 check (opcao2 = 1),
-);
+    opcao2 int
+) auto_increment = 2000;
