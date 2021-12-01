@@ -84,6 +84,48 @@ const config = {
 
   var myChartLine2 = new Chart(document.getElementById("myChartRight"), config2);
 
+  //Grafico Dinamico:
+  const config3 ={
+    type: 'bar',
+    data: {
+      labels: ['TOTAL VOTOS', 'NETO', 'MARCELINHO'],
+      datasets: [{
+        label: 'Resultado Parcial Enquete',
+        data: [/*BD DINAMICO*/115 , 75, 40],
+        backgroundColor: [
+          '#ffd700',
+          '#dcdcdc',
+          '#000'
+        ],
+        borderColor: [
+          '#3f0569',
+          '#111',
+          '#f8f8f8'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          maintainAspectRatio: false,
+            ticks: {
+              color: '#000'
+          }
+        },
+        x: {
+          maintainAspectRatio: false,
+          ticks: {
+            color: '#000'
+          }
+        },
+      }
+    },
+  };
+
+  var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3);  
+
 function voto(){
   
 }

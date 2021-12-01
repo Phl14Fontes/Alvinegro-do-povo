@@ -117,7 +117,7 @@ span{
 /* ENQUETES: */
 .enquetes{
     background-color: #3F0569;
-    height: 130vh;
+    height: 250vh;
     margin-top: -10vh;
     padding: 8px;
 }
@@ -225,4 +225,18 @@ span{
     background-color: #111;
     color: #fff;
     font-weight: 700;
+}
+.grafico-dinamico{
+    width: 75%;
+    height: 100vh;
+    margin-top: 10vh;
+    margin-left: 11%;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+#grafico_enquete{
+    margin-top: 7%;
+    margin-right: 2%;
+    width: 70%;
+    height: 105%;
 }
