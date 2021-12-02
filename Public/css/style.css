@@ -107,3 +107,8 @@ footer{
     height: 20vh;
     width: 100%;
 }
+#nome_li:hover{
+    box-shadow: 0px 0px 0px;
+    color: #f8f8f8;
+    cursor: default;
+}

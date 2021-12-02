@@ -64,7 +64,6 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
-    //var resposta = usuarioModel.listar(email)
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está em branco!");

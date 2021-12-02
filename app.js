@@ -10,7 +10,8 @@ var app = express();
 
 var indexRouter = require("../Alvinegro-do-povo/src/routes/index");
 var usuarioRouter = require("../Alvinegro-do-povo/src/routes/usuarios");
-var medidaRouter = require("../Alvinegro-do-povo/src/routes/medidas")
+var medidaRouter = require("../Alvinegro-do-povo/src/routes/medidas");
+var escolhaRouter = require("../Alvinegro-do-povo/src/routes/escolha");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,6 +22,7 @@ app.use(cors());
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/medidas", medidaRouter);
+app.use("/escolha", escolhaRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do site está rodando rodando: http://localhost:${PORTA} \n

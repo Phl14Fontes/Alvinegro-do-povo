@@ -1,21 +1,16 @@
-//checar se ele está logado;
 function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
 
-    var nome_span = document.getElementById("nome_usuario_header")
-    if(email != null && nome != null){
-        nome_span.innerHTML += `${nome}`;
-    } //else{
-    //   alert("Esta sessão expirou!");
-    //   sair();
-    // }
+    if(email == null && nome == null){
+      alert("Esta sessão expirou!");
+      sair();
+    }
 }
 
-//se clicar em SAIR;
-    function sair() {
-        sessionStorage.clear();
-        window.location = "../login.html";
+function sair() {
+    sessionStorage.clear();
+    window.location = "../login.html";
 }
 
 //CHART.JS:
@@ -84,56 +79,10 @@ const config = {
 
   var myChartLine2 = new Chart(document.getElementById("myChartRight"), config2);
 
-  /*Grafico Dinamico:
-  const config3 ={
-    type: 'bar',
-    data: {
-      labels: ['TOTAL VOTOS', 'NETO', 'MARCELINHO'],
-      datasets: [{
-        label: 'Resultado Parcial Enquete',
-        data: [BD DINAMICO115 , 75, 40],
-        backgroundColor: [
-          '#ffd700',
-          '#dcdcdc',
-          '#000'
-        ],
-        borderColor: [
-          '#3f0569',
-          '#111',
-          '#f8f8f8'
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          maintainAspectRatio: false,
-            ticks: {
-              color: '#000'
-          }
-        },
-        x: {
-          maintainAspectRatio: false,
-          ticks: {
-            color: '#000'
-          }
-        },
-      }
-    },
-  };
 
-  var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3); */ 
+window.onload = verifica_conexao_banco();
 
-function voto(){
-    //function do insert;
-}
-
-
-window.onload = verificar_interacao_grafico();
-
-function verificar_interacao_grafico(idVoto) {
+function verifica_conexao_banco(idVoto) {
 
 
         fetch(`/medidas/votos/${idVoto}`, { cache: 'no-store' }).then(function (response) {
@@ -141,7 +90,7 @@ function verificar_interacao_grafico(idVoto) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
-                    console.log('a resposta retornou um valor, agora se chegou no gráfico ainda não sabemos');
+                    console.log('Dados encontrados, aguardando plotar');
                     plotarGrafico(resposta, idVoto);
 
                 });
@@ -164,7 +113,7 @@ function plotarGrafico(resposta, idVoto) {
       labels: ['TOTAL VOTOS', 'NETO', 'MARCELINHO'],
       datasets: [{
         label: 'Resultado Parcial Enquete',
-     //  resposta[0].interacao_big, resposta[0].buracosNegros, resposta[0].multiversos, resposta[0].bigCrunch
+        //.totalVotos é o apelido da coluna no BD;
         data: [resposta[0].totalVotos, resposta[0].opcao1, resposta[0].opcao2],
         backgroundColor: [
           '#ffd700',
@@ -199,32 +148,59 @@ function plotarGrafico(resposta, idVoto) {
   };
 
   var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3); 
-  /*function plotarGrafico(resposta, idAquario) {
-        console.log('iniciando plotagem do gráfico...');
+}
 
-        const coluna = {
-            type: "bar",
-            data: {
-                labels: ["Big Bang", "Buracos Negros", "Multiversos", "Big Crunch"],
-                datasets: [{
-                    label: ["Análise conteúdo"],
-                    data: [resposta[0].interacao_big, resposta[0].buracosNegros, resposta[0].multiversos, resposta[0].bigCrunch],
-                    backgroundColor: ["#800000", "#003153", "#90ee90", "#d75413",],
-                    color: "red",
-                }
-                ]
-            },
-            options: {
-                labels: { color: "red" },
-                maintainAspectRatio: false
-            }
+function votar1(){
+    var opcao1Var = 1;
 
-        }
+  fetch("/escolha/votar", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        opcao1: opcao1Var,
+    })
+}).then(function (resposta) {
 
-        var myChartcolumn = new Chart(document.getElementById("grafico_coluna"), coluna);
+    console.log( resposta);
+    console.log( "resposta");
 
-
-    } */
-
-
+    if (resposta.ok) {
+        console.log("Voto computado!");
+    } else {
+        alert("Houve um erro ao tentar realizar o voto!");
     }
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+    window.location.reload();
+}
+
+
+function votar2(){
+  var opcao2Var = 1;
+
+fetch("/escolha/votar2", {
+  method: "POST",
+  headers: {
+      "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+      opcao2: opcao2Var,
+  })
+}).then(function (resposta) {
+
+  console.log( resposta);
+  console.log( "resposta");
+
+  if (resposta.ok) {
+      console.log("Voto computado!");
+  } else {
+      alert("Houve um erro ao tentar realizar o voto!");
+  }
+}).catch(function (resposta) {
+  console.log(`#ERRO: ${resposta}`);
+});
+  window.location.reload();
+}
