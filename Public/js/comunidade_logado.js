@@ -84,14 +84,14 @@ const config = {
 
   var myChartLine2 = new Chart(document.getElementById("myChartRight"), config2);
 
-  //Grafico Dinamico:
+  /*Grafico Dinamico:
   const config3 ={
     type: 'bar',
     data: {
       labels: ['TOTAL VOTOS', 'NETO', 'MARCELINHO'],
       datasets: [{
         label: 'Resultado Parcial Enquete',
-        data: [/*BD DINAMICO*/115 , 75, 40],
+        data: [BD DINAMICO115 , 75, 40],
         backgroundColor: [
           '#ffd700',
           '#dcdcdc',
@@ -124,8 +124,107 @@ const config = {
     },
   };
 
-  var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3);  
+  var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3); */ 
 
 function voto(){
-    
+    //function do insert;
 }
+
+
+window.onload = verificar_interacao_grafico();
+
+function verificar_interacao_grafico(idVoto) {
+
+
+        fetch(`/medidas/votos/${idVoto}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+                    console.log('a resposta retornou um valor, agora se chegou no gráfico ainda não sabemos');
+                    plotarGrafico(resposta, idVoto);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    
+function plotarGrafico(resposta, idVoto) {
+        console.log('iniciando plotagem do gráfico...');
+
+    //Grafico Dinamico:
+  const config3 ={
+    type: 'bar',
+    data: {
+      labels: ['TOTAL VOTOS', 'NETO', 'MARCELINHO'],
+      datasets: [{
+        label: 'Resultado Parcial Enquete',
+     //  resposta[0].interacao_big, resposta[0].buracosNegros, resposta[0].multiversos, resposta[0].bigCrunch
+        data: [resposta[0].totalVotos, resposta[0].opcao1, resposta[0].opcao2],
+        backgroundColor: [
+          '#ffd700',
+          '#dcdcdc',
+          '#000'
+        ],
+        borderColor: [
+          '#3f0569',
+          '#111',
+          '#f8f8f8'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          maintainAspectRatio: false,
+            ticks: {
+              color: '#000'
+          }
+        },
+        x: {
+          maintainAspectRatio: false,
+          ticks: {
+            color: '#000'
+          }
+        },
+      }
+    },
+  };
+
+  var myChartLine3 = new Chart(document.getElementById("grafico_enquete"), config3); 
+  /*function plotarGrafico(resposta, idAquario) {
+        console.log('iniciando plotagem do gráfico...');
+
+        const coluna = {
+            type: "bar",
+            data: {
+                labels: ["Big Bang", "Buracos Negros", "Multiversos", "Big Crunch"],
+                datasets: [{
+                    label: ["Análise conteúdo"],
+                    data: [resposta[0].interacao_big, resposta[0].buracosNegros, resposta[0].multiversos, resposta[0].bigCrunch],
+                    backgroundColor: ["#800000", "#003153", "#90ee90", "#d75413",],
+                    color: "red",
+                }
+                ]
+            },
+            options: {
+                labels: { color: "red" },
+                maintainAspectRatio: false
+            }
+
+        }
+
+        var myChartcolumn = new Chart(document.getElementById("grafico_coluna"), coluna);
+
+
+    } */
+
+
+    }
